@@ -21,3 +21,11 @@ build-production:
 
 run-production:
 	ENV=production docker-compose -f docker-compose-production.yml up
+
+SSH_STRING:=root@209.97.162.28
+
+ssh:
+	ssh ${SSH_STRING}
+
+copy-files:
+	scp -r ./* $(SSH_STRING):/root/
