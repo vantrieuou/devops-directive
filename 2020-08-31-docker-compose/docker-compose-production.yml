@@ -24,5 +24,7 @@ networks:
   mern-app:
     driver: bridge
 volumes:
-  mongo-data:
+  caddy-data:
+    driver: local
+  caddy-config:
     driver: local
