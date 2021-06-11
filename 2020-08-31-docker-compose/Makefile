@@ -33,13 +33,10 @@ stop:
 ### REMOTE
 
 SSH_STRING:=root@128.199.251.54
-
 ssh:
 	ssh $(SSH_STRING)
 
-
 # apt install make
-
 copy-files:
 	scp -r ./* $(SSH_STRING):/root/
 
